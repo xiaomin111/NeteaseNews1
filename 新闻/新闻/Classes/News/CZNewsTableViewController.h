@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CZNewsTableViewController.h
 //  新闻
 //
 //  Created by mac on 15-7-4.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CZNewsTableViewController : UITableViewController
 
 @end
-
