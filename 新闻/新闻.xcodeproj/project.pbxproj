@@ -10,6 +10,8 @@
 		04929E9B1B4700E1008D0B6E /* CZNews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04929E9A1B4700E1008D0B6E /* CZNews.storyboard */; };
 		04929E9E1B470107008D0B6E /* CZNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04929E9D1B470107008D0B6E /* CZNewsTableViewController.m */; };
 		04929EA11B470554008D0B6E /* CZNetWorkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 04929EA01B470554008D0B6E /* CZNetWorkTools.m */; };
+		0493C75E1B48F9BE002B270F /* CZNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 0493C75D1B48F9BE002B270F /* CZNews.m */; };
+		0493C7611B490A8B002B270F /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 0493C7601B490A8B002B270F /* NSArray+Log.m */; };
 		04FBBC0F1B46F82E002077D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FBBC0E1B46F82E002077D4 /* main.m */; };
 		04FBBC121B46F82E002077D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FBBC111B46F82E002077D4 /* AppDelegate.m */; };
 		04FBBC1A1B46F82E002077D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FBBC191B46F82E002077D4 /* Images.xcassets */; };
@@ -34,6 +36,10 @@
 		04929E9D1B470107008D0B6E /* CZNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZNewsTableViewController.m; sourceTree = "<group>"; };
 		04929E9F1B470554008D0B6E /* CZNetWorkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZNetWorkTools.h; sourceTree = "<group>"; };
 		04929EA01B470554008D0B6E /* CZNetWorkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZNetWorkTools.m; sourceTree = "<group>"; };
+		0493C75C1B48F9BE002B270F /* CZNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZNews.h; sourceTree = "<group>"; };
+		0493C75D1B48F9BE002B270F /* CZNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZNews.m; sourceTree = "<group>"; };
+		0493C75F1B490A8B002B270F /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		0493C7601B490A8B002B270F /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 		04FBBC091B46F82E002077D4 /* 新闻.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "新闻.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FBBC0D1B46F82E002077D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04FBBC0E1B46F82E002077D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,6 +89,8 @@
 				04929E9A1B4700E1008D0B6E /* CZNews.storyboard */,
 				04929E9C1B470107008D0B6E /* CZNewsTableViewController.h */,
 				04929E9D1B470107008D0B6E /* CZNewsTableViewController.m */,
+				0493C75C1B48F9BE002B270F /* CZNews.h */,
+				0493C75D1B48F9BE002B270F /* CZNews.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -90,6 +98,8 @@
 		04929E991B4700CA008D0B6E /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				0493C75F1B490A8B002B270F /* NSArray+Log.h */,
+				0493C7601B490A8B002B270F /* NSArray+Log.m */,
 				04929E9F1B470554008D0B6E /* CZNetWorkTools.h */,
 				04929EA01B470554008D0B6E /* CZNetWorkTools.m */,
 			);
@@ -307,8 +317,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0493C75E1B48F9BE002B270F /* CZNews.m in Sources */,
 				04FBBC121B46F82E002077D4 /* AppDelegate.m in Sources */,
 				04929E9E1B470107008D0B6E /* CZNewsTableViewController.m in Sources */,
+				0493C7611B490A8B002B270F /* NSArray+Log.m in Sources */,
 				04FBBC0F1B46F82E002077D4 /* main.m in Sources */,
 				04929EA11B470554008D0B6E /* CZNetWorkTools.m in Sources */,
 			);
