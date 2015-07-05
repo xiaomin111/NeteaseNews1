@@ -2,22 +2,66 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nzr-NC-J3m">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--News Table View Controller-->
         <scene sceneID="2q1-Iz-0mG">
             <objects>
                 <tableViewController id="nzr-NC-J3m" customClass="CZNewsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rdR-XX-uH8">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="rdR-XX-uH8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qZ5-tY-eV3">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="80" id="qZ5-tY-eV3" customClass="CZNewsCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qZ5-tY-eV3" id="RHb-ZT-9dP">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xRR-Yd-Bex" userLabel="图片">
+                                            <rect key="frame" x="8" y="11" width="80" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="QE1-bu-KvI"/>
+                                                <constraint firstAttribute="height" constant="60" id="wCt-su-X8y"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olx-YS-nMh" userLabel="标题">
+                                            <rect key="frame" x="96" y="11" width="38" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcO-Dk-muN" userLabel="跟帖">
+                                            <rect key="frame" x="559" y="54" width="33" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFM-Hy-Gsa">
+                                            <rect key="frame" x="96" y="37" width="33" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qcO-Dk-muN" firstAttribute="trailing" secondItem="RHb-ZT-9dP" secondAttribute="trailingMargin" id="7g8-yc-dCj"/>
+                                        <constraint firstItem="olx-YS-nMh" firstAttribute="leading" secondItem="xRR-Yd-Bex" secondAttribute="trailing" constant="8" id="8Hq-4T-GN4"/>
+                                        <constraint firstItem="xRR-Yd-Bex" firstAttribute="top" secondItem="olx-YS-nMh" secondAttribute="top" id="Nnw-5O-IsO"/>
+                                        <constraint firstItem="xRR-Yd-Bex" firstAttribute="top" secondItem="RHb-ZT-9dP" secondAttribute="topMargin" constant="3" id="Ose-O1-5SA"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="qcO-Dk-muN" secondAttribute="bottom" constant="1" id="kX1-dB-Odp"/>
+                                        <constraint firstItem="xRR-Yd-Bex" firstAttribute="leading" secondItem="RHb-ZT-9dP" secondAttribute="leadingMargin" id="oaQ-eT-Vbp"/>
+                                        <constraint firstItem="eFM-Hy-Gsa" firstAttribute="top" secondItem="olx-YS-nMh" secondAttribute="bottom" constant="8" id="uk3-K0-yNK"/>
+                                        <constraint firstItem="olx-YS-nMh" firstAttribute="leading" secondItem="eFM-Hy-Gsa" secondAttribute="leading" id="wjg-c6-mk5"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="digestView" destination="eFM-Hy-Gsa" id="GwN-4M-I7z"/>
+                                    <outlet property="iconView" destination="xRR-Yd-Bex" id="5OS-cc-oA2"/>
+                                    <outlet property="replyCountView" destination="qcO-Dk-muN" id="u0E-4s-djS"/>
+                                    <outlet property="titleView" destination="olx-YS-nMh" id="MJX-hz-M1q"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -28,7 +72,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oGa-Py-ikr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="514" y="340"/>
+            <point key="canvasLocation" x="514" y="339"/>
         </scene>
     </scenes>
 </document>

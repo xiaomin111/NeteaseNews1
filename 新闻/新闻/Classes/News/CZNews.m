@@ -63,19 +63,21 @@ const char *kPropertiesKey = "kPropertiesKey";
     NSDictionary *dic = [self dictionaryWithValuesForKeys:propertis];
     return [NSString stringWithFormat:@"<%@:%p> %@",self.class,self,dic];
 }
-+(void)loadNewsListWithURLString:(NSString *)urlString{
++(void)loadNewsListWithURLString:(NSString *)urlString finished:(void (^)(NSArray *))finished{
+    NSAssert(finished !=nil, @"必须转入完成回调");
     [[CZNetWorkTools shareNetWorkTools] GET:urlString parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary * responseObject) {
         //利用keyEnumerator.nextObject 能拿到第一个key
         NSLog(@"%@",responseObject.keyEnumerator.nextObject);
         //根据key拿到数组
         NSArray *array = responseObject[responseObject.keyEnumerator.nextObject];
-//        NSLog(@"array = %@",array);
+        NSLog(@"array = %@",array);
         //Capacity 容量 假设分配10，一次性可以分配10个内存空间
         NSMutableArray *mArray = [NSMutableArray arrayWithCapacity:array.count];
         for (NSDictionary *dic in array) {
             [mArray addObject:[self newsWithDict:dic]];
 //            NSLog(@"mArray = %@",mArray);
         }
+        finished(mArray.copy);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@",error);
     }];
